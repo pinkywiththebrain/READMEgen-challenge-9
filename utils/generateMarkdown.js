@@ -49,7 +49,7 @@ function generateMarkdown(data) {
   
   ## Contact
   If you have any further questions:\n
-  Read through the documentation on github.com/${data.github}\n
+  Read through the documentation on <a href=github.com/${data.github}>my github</a>\n
   Or contact me directly at ${data.email}`;
 }
 
