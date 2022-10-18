@@ -1,3 +1,4 @@
+// packages needed for app
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -52,6 +53,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 //   Read through the documentation on github.com/${github}
 //   Or contact me directly at ${email}`;
 
+//array of questions created with inquirer
 inquirer
   .prompt([
     {
@@ -101,6 +103,7 @@ inquirer
         message: 'What is your email address?',
     },
   ])
+  // function that writes the README
   .then((answers) => {
     const READMEContent = generateMarkdown(answers);
 
