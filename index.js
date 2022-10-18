@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // // TODO: Include packages needed for this application
 
@@ -15,41 +16,41 @@ const fs = require('fs');
 // // Function call to initialize app
 // init();
 
-const generateREADME = ({}) =>
-  `![GitHub license](https://img.shields.io/badge/license-mit-blue.svg)
-  # ${data.title}
+// const generateREADME = ({}) =>
+//   `![GitHub license](https://img.shields.io/badge/license-mit-blue.svg)
+//   # ${data.title}
 
-  ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contribution]{#contribution}
-  - [Tests](#tests)
-  - [Contact](#contact)
+//   ## Table of Contents
+//   - [Description](#description)
+//   - [Installation](#installation)
+//   - [Usage](#usage)
+//   - [License](#license)
+//   - [Contribution]{#contribution}
+//   - [Tests](#tests)
+//   - [Contact](#contact)
 
-  ## Description
-  ${description}
+//   ## Description
+//   ${description}
   
-  ## Installation Instructions
-  ${installation}
+//   ## Installation Instructions
+//   ${installation}
   
-  ## Usage
-  ${usage}
+//   ## Usage
+//   ${usage}
   
-  ## License
+//   ## License
   
   
-  ## Contribution
-  ${contributing}
+//   ## Contribution
+//   ${contributing}
   
-  ## Tests
-  ${tests}
+//   ## Tests
+//   ${tests}
   
-  ## Contact
-  If you have any further questions:
-  Read through the documentation on github.com/${github}
-  Or contact me directly at ${email}`;
+//   ## Contact
+//   If you have any further questions:
+//   Read through the documentation on github.com/${github}
+//   Or contact me directly at ${email}`;
 
 inquirer
   .prompt([
@@ -74,10 +75,10 @@ inquirer
       message: 'Provide instructions for the use of your project.',
     },
     {
-      type: 'checkbox',
+      type: 'list',
       name: 'license',
       message: 'What license did you use for this project?',
-      choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None']
+      choices: ['MIT', 'APACHE2.0', 'GPL3.0', 'BSD3', 'None']
     },
     {
       type: 'input',
@@ -101,7 +102,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    const READMEContent = generateREADME(answers);
+    const READMEContent = generateMarkdown(answers);
 
     fs.writeFile('README.md', READMEContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README!')
