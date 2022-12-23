@@ -3,63 +3,13 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// // TODO: Include packages needed for this application
-
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-// const generateREADME = ({}) =>
-//   `![GitHub license](https://img.shields.io/badge/license-mit-blue.svg)
-//   # ${data.title}
-
-//   ## Table of Contents
-//   - [Description](#description)
-//   - [Installation](#installation)
-//   - [Usage](#usage)
-//   - [License](#license)
-//   - [Contribution]{#contribution}
-//   - [Tests](#tests)
-//   - [Contact](#contact)
-
-//   ## Description
-//   ${description}
-  
-//   ## Installation Instructions
-//   ${installation}
-  
-//   ## Usage
-//   ${usage}
-  
-//   ## License
-  
-  
-//   ## Contribution
-//   ${contributing}
-  
-//   ## Tests
-//   ${tests}
-  
-//   ## Contact
-//   If you have any further questions:
-//   Read through the documentation on github.com/${github}
-//   Or contact me directly at ${email}`;
-
 //array of questions created with inquirer
 inquirer
   .prompt([
     {
       type: 'input',
       name: 'title',
-      message: 'What is the title fo your project?',
+      message: 'What is the title of your project?',
     },
     {
       type: 'input',

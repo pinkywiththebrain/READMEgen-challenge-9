@@ -1,36 +1,20 @@
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-  # Challenge 9: README Generator 
+  # Challenge 18: Social Network API 
 
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contribution](#contribution)
-  - [Tests](#tests)
+  - [Demo Video](#demo-video)
   - [Contact](#contact)
 
   ## Description
-  In this challenge I was instructed to create a README generator using Javascript, Node.js, as well as the npm package Inquirer. I used the completed generator to make this very README!
+  In this project I was instructed to create the backend for a social network app using MongoDB. This app would allow users to make posts, add comments to those posts, as well as add other users to their friends list. Additionally the user would be able to edit and delete posts and comments, as while as delete friends. This assignment helped me understand how to create routes and databases using MongoDB.
   
   ## Installation Instructions
-  Must download the inquirer package in order to use.
+  Run ```npm i``` in the terminal and then ```npm start``` to start the server. From there you can test each route in Insomnia.
   
-  ## Usage
-  After submitting "node index" into the command line, the user is given several prompts to answer. Once they finish answering the prompts the generator will provide them with a README.md file that displays all the information they gave.
-
-  ### Video demo
-
-  ![video](./assets/2022-10-18%2019-13-12.gif)
+  ## Demo Video
   
-  ## License Information Link
-  https://opensource.org/licenses/MIT
-  
-  ## Contribution
-  No contribution needed.
-  
-  ## Tests
-  No tests needed.
+  <a href=https://youtu.be/eC0UV72mDt0>Demo Video Link</a>
   
   ## Contact
   If you have any further questions:
